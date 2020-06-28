@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+
+  <h2>Definiciones y notas a tener en cuenta</h2>
+
+  <ul>
+    <li>El objeto global de JS del lado del navegador es el objeto window</li>
+    <li>El hoisting es en terminos generales, que las declaraciones de variables y funciones son fisicamente movidas al comienzo del codigo</li>
+    <li>Es una mala practica el uso de la palabra reservada var, por que no respeta el ambito (scope) de ejecucion de la misma, para ello se creo la palabra reservada let</li>
+  </ul>
+  <script>
+    var hola = 'Hola mundo' // Las variables declaradas con la palabra reservada (var), no tienen ambito de bloque, su ambito es global. Esto puede ser considerado una mala practica
+    console.log(hola)
+    let hello = 'Hello World' // la palabra reservada let corrige este detalle y nos permite declarar variables con ambitos globales y locales
+    console.log(hello)
+  </script>
+</body>
+
+</html>

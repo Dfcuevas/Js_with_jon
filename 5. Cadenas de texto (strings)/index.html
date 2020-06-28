@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadenas de texto en JS</title>
+</head>
+<body>
+  <h1>Cadenas de texto (strings)</h1>
+
+
+  <script>
+
+    // Cadenas de texto (strings)
+
+    let nombre = 'Diego'
+    let apellido = new String('Cuevas')
+
+    console.log(nombre.length, apellido.length)
+
+    // length es una propiedad del objeto string
+
+    console.log(nombre.toLowerCase()) //Convierte todos los caracteres del string nombre a minusculas
+    console.log(apellido.toUpperCase()) //Convierte todos los caracteres del string nombre a mayusculas
+    
+    let lorem = 'lorem ipsum, diego hola esto es un ayayay de dolor'
+
+    console.log(lorem.includes('ipsum'))
+
+    console.log(lorem.trim()) // el metodo trim() elimina los espacios en blanco al principio y al final del string
+
+    console.log(lorem.split(',')) // el metodo split() me convierte una cadena de texto en un arreglo (array) en el parametro se le indico que cuando identifique un espacio en blanco, ahi es donde tiene que separar la cadena
+  </script>
+</body>
+</html>

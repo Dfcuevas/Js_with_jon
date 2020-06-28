@@ -10,8 +10,32 @@
 
 
   <script>
+    // Constantes, no se pueden declarar variables const vacias
 
-    alert('Hola')
+    /*const NUEVE; me va a tirar error*/
+    
+    const objeto = {
+      nombre: 'Diego',
+      edad: 35
+    }
+
+    const colores = ['Blanco', 'Negro', 'Azul']
+
+    console.log(objeto)
+    console.log(colores)
+
+    objeto.correo = 'ingdcuevas@gmail.com'
+
+    colores.push('Anaranjado')
+
+    console.log(objeto)
+    console.log(colores) 
+
+    //para los datos primitivos despues de declarar un const no puedo cambiarle el valor de la declaracion
+
+    // Los valores compuestos, no estamos accediendo al valor directamente sino a una referencia de ese valor 
+
+    
   </script>
 </body>
 </html>

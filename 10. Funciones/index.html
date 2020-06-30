@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones en JS</title>
+</head>
+<body>
+  <h1>Funciones en JS</h1>
+
+  <script>
+
+    //Datos compuestos: se accede a la referencia del valor.
+
+    // Funciones
+    /* 
+      Una funcion es un bloque de codigo, autocontenido, que se puede definir una vez y ejecutar en cualquier momento. 
+
+      Opcionalmente, una funcion puede aceptar parametros y devolver un valor.
+
+      Las funciones en JS son objetos, un tipo especial de objetos: 
+      Se dice que las funciones son ciudadanos de primera clase porque pueden asignarse a un valor, y puede pasarse como argumentos y usarse como un valor de retorno  
+     */
+
+    function estoEsUnaFuncion(){
+      console.log('Uno')
+      console.log('Dos')
+      console.log('Tres')
+      console.log('Aqui se acaba esta funcion')
+    }
+
+    function unaFuncionQueDevuelveValor(){
+      console.log('***********')
+      console.log('Uno')
+      return 'La funcion ha retornado una cadena de texto'
+      console.log('Dos')
+    }
+    //Cuando una funcion cuando se esta ejecutando encuentra un return, retorna el valor que se le esta asignando a esta palabra reservada, y, si hay mas codigo despues del return, este codigo se ignora. En pocas palabras, el return es el fin de la ejecucion de la funcion.
+
+    // Invocacion de funciones
+
+    //estoEsUnaFuncion() // Los parentesis indican que una funcion se va a ejecutar
+
+    let valorDeFuncion = unaFuncionQueDevuelveValor()
+    //console.log(valorDeFuncion)
+
+
+
+    // Parametros de una funcion 
+
+    function saludar(nombre = 'Diego', edad = 31){ // Los argumentos o parametros de una funcion se declaran o (pasan) a la funcion por medio de los parentesis ()
+      console.log(`Hola mi nombre es ${ nombre } y tengo ${ edad } año`)
+    }
+
+    saludar('Moises', 1)
+    saludar() // Cuando llamo a la funcion para que se ejecute sin pasarle parametros, en la misma funcion puede asignarle valores a los parametros, para que, si se le llama y no se le pasan parametros, muestre algo diferente a (undefined)
+
+    //Funciones declaradas vs funciones expresadas
+
+    /* 
+      Podemos invocar funciones incluso antes de declararlas, esto es gracias al hoisting, que sube la declaracion de la funcion al inicio del programa
+     */
+    funcionDeclarada()
+
+    function funcionDeclarada(){
+      console.log('Esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada')
+    }
+
+    // Funciones expresadas o anonimas
+
+
+    const funcionExpresada = function (){
+      console.log('Esto es una funcion expresada, es decir, una funcion que se le ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion js nos dira que no se puede acceder antes de la inicializacion ')
+    }
+
+    funcionExpresada() //Si la invoco antes de la declaracion, js me mostrara un error diciendo que no se puede acceder antes de la inicializacion 
+  </script>
+</body>
+</html>

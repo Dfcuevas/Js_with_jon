@@ -10,7 +10,35 @@
 
 
   <script>
-    
+
+    // Template strings en JavaScript
+
+    let nombre = 'Diego'
+    let apellido = 'Cuevas'
+
+    //Concatenación
+
+    let saludo = 'Hola mi nombre es' + nombre + ' ' + apellido + '.';
+    console.log(saludo)
+
+    //Interpolacion de variables
+    // La interpolacion nos permite utilizar cualquier expresón válida de JS (como la suma de dos variables) dentro de una cadena y obtener como resultado la cadena completa con la expresion evaluada.
+
+    // Template strings
+
+    let saludo2 = `Hola mi nombre es ${ nombre } ${ apellido }.` 
+    console.log(saludo2)
+
+    let ul = `
+      <ul>
+        <li>Primavera</li>
+        <li>Verano</li>
+      </ul>
+    `
+    console.log(ul)
+
+    let ul3 
+
   </script>
 </body>
 </html>

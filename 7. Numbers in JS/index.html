@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numbers in JS</title>
+</head>
+<body>
+  <h1>Numeros en JavaScript</h1>
+
+  <script>
+
+    let a = 2
+    let b = new Number(1)
+    let c = 7.19
+    let d = '7.19'
+    console.log(a,b)
+    
+    console.log(c.toFixed(1)) // el metodo toFixed() me indica la cantidad de decimales despues del punto debe tener mi numero. Esta cantidad se indica como argumento (parametro) y puede ir desde 0 hasta 20 inclusive
+
+    console.log(parseInt(c)) // El metodo parseInt() retorna la parte entera de un valor de una variable (incluso si es un string o un number)
+
+    console.log(parseFloat(a)) //Muy similar a parseInt() pero este me devuelve incluso la parte decimal del valor de la variable
+
+    console.log(c + d) // cuando intentas sumar el valor de dos variables, una tipo number y otra tipo string, lo que pasará es que se concatenan, ya que no se puede realizar la operacion aritmetica sobre una cadena de texto.
+    console.log((c + parseFloat(d)).toFixed(1))
+    console.log((c + Number.parseFloat(d)).toFixed(1))
+
+  </script>
+</body>
+</html>

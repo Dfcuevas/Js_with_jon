@@ -13,8 +13,34 @@
     
     //Objetos 
     // Una buena practica es declarar un objeto con la palabra reservada const
+    // Un objeto es una coleccion de llaves y valores.
 
-    
+    const diego = {
+      nombre: 'Diego',
+      apellido: 'Cuevas',
+      edad: 31,
+      pasatiempos: ['Correr', 'Hacer ejercicio', 'Aprender programación'],
+      soltero: true,
+      contacto: {
+        email: 'ingdcuevas@gmail.com',
+        twitter: '@dfcuevas',
+        movil: '3203040404'
+      },
+      saludar: function (){
+        console.log(`Hola :)`)
+      },
+      decirMiNombre: function (){
+        console.log(`Hola, me llamo ${ this.nombre } ${ this.apellido } y mi correo de contacto es ${ this.contacto.email }, me gusta ${ this.pasatiempos[2] }`)
+      }
+    }
+
+    //Dentre de un objeto, a las variables se le van a llamar atributos/propiedades y a las funciones se les llama metodos.
+
+    console.log(diego)
+    console.log(diego['nombre'])
+    diego.saludar();
+    console.log(diego.contacto.email)
+    diego.decirMiNombre()
 
     
   </script>
